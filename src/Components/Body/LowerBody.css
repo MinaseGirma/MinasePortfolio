@@ -1,0 +1,207 @@
+/* Lower Body Section Styles */
+.lower-body-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1a1a2e 50%, #16213e 100%);
+  padding: 80px 24px;
+  position: relative;
+}
+
+.lower-body-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #dc2626, #991b1b);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* About Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* About Card */
+.about-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 12px;
+  padding: 32px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-card:hover {
+  border-color: #dc2626;
+  background: rgba(220, 38, 38, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(220, 38, 38, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.card-icon {
+  font-size: 24px;
+}
+
+/* Card Content */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.item-meta {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* Skills List */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: rgba(220, 38, 38, 0.15);
+  color: #dc2626;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(220, 38, 38, 0.25);
+  border-color: #dc2626;
+  transform: scale(1.05);
+}
+
+/* Abilities List */
+.abilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ability-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ability-dot {
+  width: 8px;
+  height: 8px;
+  background: #dc2626;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ability-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lower-body-section {
+    padding: 60px 16px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .about-card {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .skills-list {
+    gap: 6px;
+  }
+
+  .skill-tag {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}
