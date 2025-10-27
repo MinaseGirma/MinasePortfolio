@@ -1,4 +1,4 @@
-"use client"
+import React from "react"
 
 import { useState, useEffect } from "react"
 import "./header.css"
@@ -15,6 +15,23 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const handleContactClick = () => {
+    const footerElement = document.getElementById("footer")
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault()
+    const targetId = href.replace("#", "")
+    const targetElement = document.getElementById(targetId)
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" })
+    }
+    setIsMobileMenuOpen(false)
+  }
 
   const navItems = [
     { label: "Home", href: "#home" },
@@ -34,7 +51,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="nav-desktop">
           {navItems.map((item) => (
-            <a key={item.label} href={item.href} className="nav-link">
+            <a key={item.label} href={item.href} onClick={(e) => handleNavClick(e, item.href)} className="nav-link">
               {item.label}
             </a>
           ))}
@@ -42,7 +59,9 @@ export default function Header() {
 
         {/* Right Section */}
         <div className="header-right">
-          <button className="btn-primary">Contact me</button>
+          <button className="btn-primary" onClick={handleContactClick}>
+            Contact me
+          </button>
 
           {/* Mobile Menu Toggle */}
           <button className="mobile-menu-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -57,11 +76,18 @@ export default function Header() {
       {isMobileMenuOpen && (
         <nav className="nav-mobile">
           {navItems.map((item) => (
-            <a key={item.label} href={item.href} className="nav-link-mobile" onClick={() => setIsMobileMenuOpen(false)}>
+            <a
+              key={item.label}
+              href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
+              className="nav-link-mobile"
+            >
               {item.label}
             </a>
           ))}
-          <button className="btn-primary-mobile">Contact me</button>
+          <button className="btn-primary-mobile" onClick={handleContactClick}>
+            Contact me
+          </button>
         </nav>
       )}
 

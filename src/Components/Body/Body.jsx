@@ -1,10 +1,10 @@
-"use client"
+import React from "react"
 
 import "./body.css"
 
 export default function Body() {
   return (
-    <section className="body-section">
+    <section className="body-section" id="home">
       <div className="body-container">
         {/* Left Content */}
         <div className="body-left">

@@ -1,6 +1,6 @@
-"use client"
+import React from "react"
 
-import './lowerbody.css'
+import "./lowerbody.css"
 
 export default function LowerBody() {
   const certifications = [
@@ -25,7 +25,7 @@ export default function LowerBody() {
   ]
 
   return (
-    <section className="lower-body-section">
+    <section className="lower-body-section" id="about">
       <div className="lower-body-container">
         <div className="section-header">
           <h2 className="section-title">About Me</h2>

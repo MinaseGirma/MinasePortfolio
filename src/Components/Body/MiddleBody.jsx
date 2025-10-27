@@ -28,7 +28,7 @@ export default function MiddleBody() {
   ]
 
   return (
-    <section className="middle-body-section">
+    <section className="middle-body-section" id="projects">
       <div className="middle-body-container">
         {/* Experience Section */}
         <div className="experience-section">
