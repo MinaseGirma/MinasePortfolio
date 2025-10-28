@@ -3,6 +3,8 @@ import React from "react"
 import "./lowerbody.css"
 
 export default function LowerBody() {
+  // since its simple to create and manage datas here directly instead of fetching from an API or external file
+  //for certifications, education, skills, and abilities
   const certifications = [
     { id: 1, name: "Python for Everybody", issuer: "Coursera", year: "2023" },
     { id: 2, name: "Data Analysis with Python", issuer: "Kifiya", year: "2025" },
