@@ -3,7 +3,7 @@ import React from "react"
 import { useState, useEffect } from "react"
 import "./header.css"
 
-export default function Header() {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -16,12 +16,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const handleContactClick = () => {
-    const footerElement = document.getElementById("footer")
-    if (footerElement) {
-      footerElement.scrollIntoView({ behavior: "smooth" })
-    }
-  }
+  const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "Projects", href: "#projects" },
+    { label: "Experience", href: "#experience" },
+    { label: "About", href: "#about" },
+  ]
 
   const handleNavClick = (e, href) => {
     e.preventDefault()
@@ -33,17 +33,17 @@ export default function Header() {
     setIsMobileMenuOpen(false)
   }
 
-  const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Projects", href: "#projects" },
-    { label: "Experience", href: "#experience" },
-    { label: "About", href: "#about" },
-  ]
+  const handleContactClick = () => {
+    const footerElement = document.getElementById("footer")
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container">
-        {/* Logo */}
+        {/* Logo Section */}
         <div className="logo-section">
           <span className="brand-name">MinaseTaye</span>
         </div>
@@ -57,7 +57,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Right Section */}
+        {/* Header Right Section */}
         <div className="header-right">
           <button className="btn-primary" onClick={handleContactClick}>
             Contact me
@@ -95,3 +95,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default Header

@@ -4,24 +4,24 @@ import "./lowerbody.css"
 
 export default function LowerBody() {
   const certifications = [
-    { id: 1, name: "Certification Name", issuer: "Issuing Organization", year: "2024" },
-    { id: 2, name: "Certification Name", issuer: "Issuing Organization", year: "2024" },
+    { id: 1, name: "Python for Everybody", issuer: "Coursera", year: "2023" },
+    { id: 2, name: "Data Analysis with Python", issuer: "Kifiya", year: "2025" },
   ]
 
   const education = [
-    { id: 1, degree: "Degree Name", school: "School/University", year: "2024" },
+    { id: 1, degree: "Mechanical Engineering", school: "Mekelle University", year: "2022" },
     { id: 2, degree: "Degree Name", school: "School/University", year: "2024" },
   ]
 
-  const skills = ["React", "JavaScript", "CSS", "HTML", "Next.js", "TypeScript", "Tailwind CSS", "Web Design"]
+  const skills = ["React", "JavaScript", "CSS", "HTML", "Web Design"]
 
   const abilities = [
     "Problem Solving",
     "Team Collaboration",
     "Project Management",
-    "UI/UX Design",
+    "Adaptability",
     "Performance Optimization",
-    "Code Review",
+    
   ]
 
   return (

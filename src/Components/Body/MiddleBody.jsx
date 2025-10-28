@@ -1,31 +1,11 @@
-"use client"
 
 import "./middlebody.css"
+import React from "react"
+import { useState, useEffect } from "react"
+import projects from "./projects.js"
 
 export default function MiddleBody() {
-  const projects = [
-    {
-      id: 1,
-      name: "Project Name",
-      description: "Brief project description",
-      github: "https://github.com",
-      image: "placeholder",
-    },
-    {
-      id: 2,
-      name: "Project Name",
-      description: "Brief project description",
-      github: "https://github.com",
-      image: "placeholder",
-    },
-    {
-      id: 3,
-      name: "Project Name",
-      description: "Brief project description",
-      github: "https://github.com",
-      image: "placeholder",
-    },
-  ]
+  const [filteredProjects, setFilteredProjects] = useState(projects)
 
   return (
     <section className="middle-body-section" id="projects">
@@ -39,10 +19,7 @@ export default function MiddleBody() {
 
           <div className="experience-content">
             <p className="experience-paragraph">
-              I'm a passionate frontend developer with a keen eye for creating beautiful, functional web experiences.
-              With expertise in modern web technologies and a commitment to clean code, I transform ideas into
-              interactive digital solutions. My journey in web development has been driven by curiosity and a desire to
-              build products that make a difference.
+              I’m a passionate Frontend Developer with hands-on experience building and styling modern web applications. While taking web development courses, I’ve worked on diverse projects including an Apple landing page, Amazon clone, Netflix clone, and Evangadi Forum. Each project has helped me strengthen my skills in React, JavaScript, HTML, CSS, and responsive design. I’m eager to continue learning, growing, and applying my skills to create interactive and visually appealing user experiences that bring ideas to life.
             </p>
           </div>
         </div>
@@ -58,13 +35,13 @@ export default function MiddleBody() {
             {projects.map((project) => (
               <div key={project.id} className="project-card">
                 <div className="project-image-placeholder">
-                  <span className="placeholder-icon">📸</span>
+                  <span className="placeholder-icon"></span>
                 </div>
                 <div className="project-info">
                   <h3 className="project-name">{project.name}</h3>
                   <p className="project-description">{project.description}</p>
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-link">
-                    View on GitHub →
+                    View on GitHub OR Live Demo →
                   </a>
                 </div>
               </div>
