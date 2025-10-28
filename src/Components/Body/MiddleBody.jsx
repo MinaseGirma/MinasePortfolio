@@ -1,5 +1,5 @@
 
-import "./Middlebody.css"
+import "./MiddleBody.css"
 import React from "react"
 import { useState, useEffect } from "react"
 import projects from "./projects.js"

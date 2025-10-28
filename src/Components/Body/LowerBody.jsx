@@ -1,6 +1,6 @@
 import React from "react"
 
-import "./Lowerbody.css"
+import "./LowerBody.css"
 
 export default function LowerBody() {
   // since its simple to create and manage datas here directly instead of fetching from an API or external file
