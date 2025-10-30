@@ -12,7 +12,7 @@ export default function LowerBody() {
 
   const education = [
     { id: 1, degree: "Mechanical Engineering", school: "Mekelle University", year: "2022" },
-    { id: 2, degree: "Degree Name", school: "School/University", year: "2024" },
+    { id: 2, degree: "", school: "", year: "" },
   ]
 
   const skills = ["React", "JavaScript", "CSS", "HTML", "Web Design"]
